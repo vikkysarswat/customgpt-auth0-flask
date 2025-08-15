@@ -1,0 +1,14 @@
+<!doctype html>
+<html>
+  <head><meta charset="utf-8"><title>CustomGPT Pilot</title></head>
+  <body style="font-family: system-ui; padding: 24px;">
+    <h1>CustomGPT Pilot (Flask)</h1>
+    {% if not user %}
+      <a href="/login">Sign in with Auth0</a>
+    {% else %}
+      <p>Hi, {{ user.name or user.email }}</p>
+      <p><a href="/dashboard">Go to Dashboard</a></p>
+      <p><a href="/logout">Logout</a></p>
+    {% endif %}
+  </body>
+</html>
