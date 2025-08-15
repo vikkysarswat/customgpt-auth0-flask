@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+  <head><meta charset="utf-8"><title>My Data</title></head>
+  <body style="font-family: system-ui; padding: 24px;">
+    <h1>My Data</h1>
+    <p>Signed in as {{ user.email }}</p>
+    <h2>Account</h2>
+    <pre>{{ {"account_id": data.account_id, "funds": data.funds } | tojson(indent=2) }}</pre>
+    <h2>Holdings</h2>
+    <pre>{{ data.holdings | tojson(indent=2) }}</pre>
+    <h2>PNL</h2>
+    <pre>{{ data.pnl | tojson(indent=2) }}</pre>
+    <h2>Ledger</h2>
+    <pre>{{ data.ledger | tojson(indent=2) }}</pre>
+    <h2>Trades</h2>
+    <pre>{{ data.trades | tojson(indent=2) }}</pre>
+    <p style="margin-top:24px;"><a href="/logout">Logout</a></p>
+  </body>
+</html>
